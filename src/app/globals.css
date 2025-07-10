@@ -1,26 +1,44 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 body {
   background: var(--background);
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
 }
+
+/* Space background iframe */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -9999;
+  border: none;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+
+
+/* Ensure hover effects work properly */
+.group:hover {
+  transform: translateY(-1rem) scale(1.05) !important;
+  z-index: 10;
+}
+
+/* Force GPU acceleration for smooth animations */
+.transform-gpu {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
