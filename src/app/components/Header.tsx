@@ -49,8 +49,14 @@ export default function Header({ setShowGlass }: HeaderProps) {
         ref={navRef}
         className="flex items-center w-[56px] px-3 py-3 rounded-full bg-gradient-to-br from-white/20 via-purple-200/10 to-purple-400/10 backdrop-blur-2xl border border-white/30 shadow-xl overflow-hidden transition-all duration-500"
         style={{ boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.18)', width: 56 }}
-        onMouseEnter={() => { setOpen(true); setShowGlass && setShowGlass(false); }}
-        onMouseLeave={() => { setOpen(false); setShowGlass && setShowGlass(true); }}
+        onMouseEnter={() => {
+          setOpen(true);
+          if (setShowGlass) setShowGlass(false);
+        }}
+        onMouseLeave={() => {
+          setOpen(false);
+          if (setShowGlass) setShowGlass(true);
+        }}
       >
         <Menu className="text-purple-500 w-7 h-7 mr-2 flex-shrink-0" />
         <div className={`flex gap-4 text-base font-semibold tracking-wide transition-opacity duration-300 ${open ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>

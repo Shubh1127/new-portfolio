@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import SplineRobot from "./robot";
 
 export default function UpperSection() {
-    const textRef = useRef<HTMLDivElement>(null);
+    // const textRef = useRef<HTMLDivElement>(null);
     const robotRef = useRef<HTMLDivElement>(null);
     const flipContainerRef = useRef<HTMLDivElement>(null);
     const flipFrontRef = useRef<HTMLDivElement>(null);
@@ -59,7 +59,7 @@ export default function UpperSection() {
                             <p className="text-4xl text-purple-400 mb-2 font-semibold">
                                 <span className="inline-block">Hey 👋</span>
                             </p>
-                            I'm{' '}
+                            I&apos;m{' '}
                             <span className="text-red-400 inline-block">SHUBHAM</span>
                             <br />
                             <span className="text-purple-400 inline-block"> A Full Stack Developer</span>

@@ -1,6 +1,5 @@
 "use client";
 import { cn } from "../utils/cn";
-// import selfy from "../../public/self.jpg"
 import React from "react";
 import { BentoGrid, BentoGridItem } from "../ui/BentoGrid";
 import {
@@ -11,7 +10,6 @@ import {
     IconTableColumn,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 
 export function Footer() {
@@ -189,14 +187,7 @@ const SkeletonFour = () => {
                 variants={first}
                 className="h-full md:w-1/3 w-full rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
             >
-                {/* <Image
-                    src={selfy}
-                    alt="avatar"
-                    height="100"
-                    width="100"
-                    className="rounded-full h-10 w-10 object-cover"
-                /> */}
-                <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
+                                <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
                     Connect on Instagram
                 </p>
                 <Link href={"https://www.instagram.com/shubhamm_1223"} className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4 cursor-pointer">
@@ -204,13 +195,7 @@ const SkeletonFour = () => {
                 </Link>
             </motion.div>
             <motion.div className="h-full relative z-20 md:w-1/3 w-full rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
-                {/* <Image
-                    src={selfy}
-                    alt="avatar"
-                    height="100"
-                    width="100"
-                    className="rounded-full h-10 w-10 object-cover"
-                /> */}
+               
                 <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
                     Mail Here
                 </p>
@@ -222,13 +207,7 @@ const SkeletonFour = () => {
                 variants={second}
                 className="h-full md:w-1/3 w-full rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
             >
-                {/* <Image
-                    src={selfy}
-                    alt="avatar"
-                    height="100"
-                    width="100"
-                    className="rounded-full h-10 w-10 object-cover"
-                /> */}
+               
                 <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
                     Message for freelancing works and opportunities
                 </p>
@@ -275,13 +254,7 @@ const SkeletonFive = () => {
                 variants={variants}
                 className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2  items-center space-x-2 bg-white dark:bg-black"
             >
-                {/* <Image
-                    src={selfy}
-                    alt="avatar"
-                    height="100"
-                    width="100"
-                    className="rounded-full h-10 w-10 object-cover"
-                /> */}
+                
                 <p className="text-xs text-neutral-500">
                     Interested in web design/development services?
                 </p>
@@ -297,13 +270,7 @@ const SkeletonFive = () => {
                 variants={variants}
                 className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2  items-center space-x-2 bg-white dark:bg-black"
             >
-                {/* <Image
-                    src={selfy}
-                    alt="avatar"
-                    height="100"
-                    width="100"
-                    className="rounded-full h-10 w-10 object-cover"
-                /> */}
+                
                 <p className="text-xs text-neutral-500">
                     How do we start?
                 </p>

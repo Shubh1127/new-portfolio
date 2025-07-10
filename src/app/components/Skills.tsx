@@ -3,7 +3,7 @@ export default function Skills() {
     return (
         <section id="skills" className="p-8 max-w-[1400px] mx-auto">
             <h1 className='text-white uppercase font-semibold text-2xl'>Skills</h1>
-            <HoverEffect items={skills} />
+            <HoverEffect items={skills} className="" />
         </section>
     );
 }

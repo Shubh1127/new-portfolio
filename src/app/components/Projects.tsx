@@ -18,9 +18,9 @@ interface Project {
 export default function ProjectsSection() {
     const sectionRef = useRef<HTMLDivElement>(null);
     const projectsRef = useRef<(HTMLDivElement | null)[]>([]);
-    const [activeFilter, setActiveFilter] = useState('All');
+    const [activeFilter] = useState('All');
     const [hoveredProject, setHoveredProject] = useState<number | null>(null);
-
+    console.log('Hovered Project:', hoveredProject);
         const projects: Project[] = [
             {
                 id: 1,
@@ -78,7 +78,7 @@ export default function ProjectsSection() {
             }
         ];
 
-    const allTags = ['All', ...new Set(projects.flatMap(project => project.tags))];
+    // const allTags = ['All', ...new Set(projects.flatMap(project => project.tags))];
     const filteredProjects = activeFilter === 'All'
         ? projects
         : projects.filter(project => project.tags.includes(activeFilter));
