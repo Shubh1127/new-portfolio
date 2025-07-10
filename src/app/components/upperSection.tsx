@@ -30,7 +30,7 @@ export default function UpperSection() {
     }, []);
 
     return (
-        <section className="relative flex items-center justify-center px-2 py-12 mx-auto min-h-[500px]">
+        <section id="about" className="relative flex items-center justify-center px-2 py-12 mx-auto min-h-[500px]">
             {/* Robot Background */}
             <div 
                 ref={robotRef} 

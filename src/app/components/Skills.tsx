@@ -1,10 +1,10 @@
 import { HoverEffect } from "../ui/HoverEffect";
 export default function Skills() {
     return (
-        <div className="p-8 max-w-[1400px] mx-auto">
+        <section id="skills" className="p-8 max-w-[1400px] mx-auto">
             <h1 className='text-white uppercase font-semibold text-2xl'>Skills</h1>
             <HoverEffect items={skills} />
-        </div>
+        </section>
     );
 }
 export const skills = [

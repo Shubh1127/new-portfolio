@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import Projects from './components/Projects'
 import Skills from "./components/Skills";
 import About from "./components/About";
+import { Footer } from "./components/Footer";
 declare global {
   interface Window {
     liquidGlass?: { destroy: () => void };
@@ -14,7 +15,7 @@ declare global {
 }
 
 export default function Home() {
-  const [showGlass, setShowGlass] = useState(true);
+  const [showGlass] = useState(true);
 
   useEffect(() => {
     if (!showGlass) {
@@ -57,6 +58,9 @@ export default function Home() {
       </div>
       <div>
         <Skills/>
+      </div>
+      <div>
+        <Footer/>
       </div>
     </div>
   );

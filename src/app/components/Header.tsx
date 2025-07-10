@@ -35,8 +35,16 @@ export default function Header({ setShowGlass }: HeaderProps) {
     }
   }, [open]);
 
+  // Add scroll handler
+  const handleScroll = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <header ref={headerRef} className="w-full pt-6 pb-2 flex justify-center items-center z-[9999] ">
+    <header ref={headerRef} className="w-full pt-6 pb-2 flex justify-center items-center z-[9999] fixed top-0 left-0 bg-transparent">
       <div
         ref={navRef}
         className="flex items-center w-[56px] px-3 py-3 rounded-full bg-gradient-to-br from-white/20 via-purple-200/10 to-purple-400/10 backdrop-blur-2xl border border-white/30 shadow-xl overflow-hidden transition-all duration-500"
@@ -46,13 +54,22 @@ export default function Header({ setShowGlass }: HeaderProps) {
       >
         <Menu className="text-purple-500 w-7 h-7 mr-2 flex-shrink-0" />
         <div className={`flex gap-4 text-base font-semibold tracking-wide transition-opacity duration-300 ${open ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-          <p className="transition-all duration-200 hover:text-purple-300 cursor-pointer px-4 py-2 rounded-full relative hover:bg-white/30 active:scale-95 select-none">
+          <p
+            className="transition-all duration-200 hover:text-purple-300 cursor-pointer px-4 py-2 rounded-full relative hover:bg-white/30 active:scale-95 select-none"
+            onClick={() => handleScroll('about')}
+          >
             About
           </p>
-          <p className="transition-all duration-200 hover:text-purple-300 cursor-pointer px-4 py-2 rounded-full relative hover:bg-white/20 active:scale-95 select-none">
+          <p
+            className="transition-all duration-200 hover:text-purple-300 cursor-pointer px-4 py-2 rounded-full relative hover:bg-white/20 active:scale-95 select-none"
+            onClick={() => handleScroll('projects')}
+          >
             Projects
           </p>
-          <p className="transition-all duration-200 hover:text-purple-300 cursor-pointer px-4 py-2 rounded-full relative hover:bg-white/20 active:scale-95 select-none">
+          <p
+            className="transition-all duration-200 hover:text-purple-300 cursor-pointer px-4 py-2 rounded-full relative hover:bg-white/20 active:scale-95 select-none"
+            onClick={() => handleScroll('skills')}
+          >
             Skills
           </p>
         </div>
