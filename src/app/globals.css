@@ -28,8 +28,6 @@ body {
   overflow: hidden;
 }
 
-
-
 /* Ensure hover effects work properly */
 .group:hover {
   transform: translateY(-1rem) scale(1.05) !important;
@@ -40,5 +38,60 @@ body {
 .transform-gpu {
   transform: translateZ(0);
   will-change: transform;
+}
+
+.bg-grid-white {
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: grid 5s linear infinite;
+}
+
+@keyframes grid {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 50px 50px, 50px 50px;
+  }
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.bg-gradient-to-br {
+  background: linear-gradient(
+    to bottom right,
+    #18181b,
+    #23233a,
+    #18181b
+  );
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.md\:grid-cols-12 {
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
