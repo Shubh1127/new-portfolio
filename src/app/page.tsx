@@ -1,6 +1,5 @@
 'use client';
-// import Image from "next/image";
-// import SplineRobot from "./components/robot";
+
 import Header from "./components/Header";
 import UpperSection from "./components/upperSection";
 import { useEffect, useState } from "react";
